@@ -77,7 +77,14 @@ bool Fan::onTouchBegan(Touch *pTouch, Event *pEvent)  {
 		auto fanPos = this->getPosition();
 
 		// 定义风的8个方向标准单位
-		int dir[8][2] = { { 0, 1 }, { 1, 1 }, { 1, 0 }, { 1, -1 }, { 0, -1 }, { -1, -1 }, { -1, 0 }, { -1, 1 } };
+		int dir[8][2] = { { 0, 1 }, 
+		{ 1, 1 }, 
+		{ 1, 0 }, 
+		{ 1, -1 }, 
+		{ 0, -1 }, 
+		{ -1, -1 }, 
+		{ -1, 0 }, 
+		{ -1, 1 } };
 
 		// 根据tag来找到帽子
 		auto hat = this->getParent()->getChildByTag(0);

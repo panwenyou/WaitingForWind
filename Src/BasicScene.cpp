@@ -29,8 +29,16 @@ bool BasicScene::init()
 	world->setPosition(visible_size.width/2, visible_size.height/2);
 	this->addChild(world);
 	
-	auto back_item = MenuItemImage::create("Back.png", "Back.png", "Back.png", CC_CALLBACK_1(BasicScene::onBackCallBack,this));
-	auto replay_item = MenuItemImage::create("Replay.png", "Replay.png", "Replay.png", CC_CALLBACK_1(BasicScene::onReplayCallBack, this));
+	auto back_item = MenuItemImage::create("Back.png", 
+	"Back.png", 
+	"Back.png", 
+	CC_CALLBACK_1(BasicScene::onBackCallBack,this));
+	
+	auto replay_item = MenuItemImage::create("Replay.png", 
+	"Replay.png", 
+	"Replay.png", 
+	CC_CALLBACK_1(BasicScene::onReplayCallBack, this));
+	
 	replay_item->setPosition(visible_size.width-120, visible_size.height-50);
 	back_item->setPosition(visible_size.width-60, visible_size.height-50);
 
