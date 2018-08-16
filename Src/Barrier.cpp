@@ -11,6 +11,7 @@ Barrier::~Barrier(void)
 }
 
 Barrier* Barrier::create(char* filename, int type)
+// Overrite create fucntion of sprite
 {
 	auto barrier = new Barrier();
 
@@ -36,7 +37,6 @@ Barrier* Barrier::create(char* filename, int type)
 	return barrier;
 }
 
-//外部设置力的方法
 void Barrier::setVelocity(int x, int y)
 {
 	auto v = this->getPhysicsBody()->getVelocity();

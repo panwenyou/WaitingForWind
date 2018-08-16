@@ -1,10 +1,10 @@
-#ifndef GAME_SCENE4_H
-#define GAME_SCENE4_H
+#ifndef GAME_SCENE_H
+#define GAME_SCENE_H
 
 #include "BasicScene.h"
 #include "Drama.h"
 
-class GameScene4 : public BasicScene
+class GameScene1 : public BasicScene
 {
 private:
 	Vector<Drama*> dramaList;
@@ -12,7 +12,7 @@ public:
 	virtual bool init();
 	virtual void resetHatPosition();
 	static Scene* createScene();
-	CREATE_FUNC(GameScene4);
+	CREATE_FUNC(GameScene1);
 };
 
 #endif

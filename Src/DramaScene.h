@@ -5,22 +5,22 @@
    2.方法名（函数名）首字母小写，接下来的每个独立单词首字母大写，如： addChild(), runAction()等等
    3.变量名全小写，单词间用下划线分割，如：x_position, y_position等等。*/
 
-#ifndef DRAMASCENE2_H
-#define DRAMASCENE2_H
+#ifndef DRAMASCENE_H
+#define DRAMASCENE_H
 
 #include "cocos2d.h"
 #include "Drama.h"
-#include "GameScene2.h"
+#include "GameScene1.h"
 
 USING_NS_CC;
 
-class DramaScene2 : public Layer
+class DramaScene : public Layer
 {
 public:
 	static Scene* createScene();
 	virtual bool init();
 	void update(float dt);
-	CREATE_FUNC(DramaScene2);
+	CREATE_FUNC(DramaScene);
 };
 
 #endif

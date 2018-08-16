@@ -45,22 +45,22 @@ void StageChoosingScene::initMenu()
 	
 	// 手动逐个添加按钮
 	auto item1 = MenuItemImage::create("LuffyStage1.png", 
-	"LuffyStage1.png", 
-	"LuffyStage1.png",
+		"LuffyStage1.png", 
+		"LuffyStage1.png",
 		CC_CALLBACK_1(StageChoosingScene::onLuffyStage1, this));
 	item1->setPosition(106, 600);
 	menu->addChild(item1);
 
 	auto item2 = MenuItemImage::create("LuffyStage2.png", 
-	"LuffyStage2.png", 
-	"LuffyStage2.png",
+		"LuffyStage2.png", 
+		"LuffyStage2.png",
 		CC_CALLBACK_1(StageChoosingScene::onLuffyStage2, this));
 	item2->setPosition(106*3, 600);
 	menu->addChild(item2);
 
 	auto item4 = MenuItemImage::create("WindComesStage1.png", 
-	"WindComesStage1.png", 
-	"WindComesStage1.png",
+		"WindComesStage1.png", 
+		"WindComesStage1.png",
 		CC_CALLBACK_1(StageChoosingScene::onWindComesStage1, this));
 	item4->setPosition(106,330);
 	menu->addChild(item4);

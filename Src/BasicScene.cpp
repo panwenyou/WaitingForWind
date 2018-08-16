@@ -23,22 +23,24 @@ bool BasicScene::init()
 
 	/* To do 在这里添加你想要添加的代码*/
 	auto visible_size = Director::getInstance()->getVisibleSize();
+
+	// 给环境加上物理边界
 	auto world_edge = PhysicsBody::createEdgeBox(visible_size);
 	auto world = Node::create();
 	world->setPhysicsBody(world_edge);
 	world->setPosition(visible_size.width/2, visible_size.height/2);
 	this->addChild(world);
 	
+	// 设置按钮
+	// 包括回退按钮和
 	auto back_item = MenuItemImage::create("Back.png", 
-	"Back.png", 
-	"Back.png", 
-	CC_CALLBACK_1(BasicScene::onBackCallBack,this));
-	
+		"Back.png", 
+		"Back.png", 
+		CC_CALLBACK_1(BasicScene::onBackCallBack,this));
 	auto replay_item = MenuItemImage::create("Replay.png", 
-	"Replay.png", 
-	"Replay.png", 
-	CC_CALLBACK_1(BasicScene::onReplayCallBack, this));
-	
+		"Replay.png", 
+		"Replay.png", 
+		CC_CALLBACK_1(BasicScene::onReplayCallBack, this));
 	replay_item->setPosition(visible_size.width-120, visible_size.height-50);
 	back_item->setPosition(visible_size.width-60, visible_size.height-50);
 

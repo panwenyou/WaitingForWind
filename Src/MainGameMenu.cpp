@@ -18,14 +18,13 @@ bool MainGameMenu::init()
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 
 	auto back_item = MenuItemImage::create("Back.png", 
-	"Back.png", 
-	"Back.png", 
-	CC_CALLBACK_1(MainGameMenu::onBackItem,this));
-	
+		"Back.png", 
+		"Back.png", 
+		CC_CALLBACK_1(MainGameMenu::onBackItem,this));
 	auto replay_item = MenuItemImage::create("Replay.png", 
-	"Replay.png", 
-	"Replay.png", 
-	CC_CALLBACK_1(MainGameMenu::onReplayItem,this));
+		"Replay.png", 
+		"Replay.png", 
+		CC_CALLBACK_1(MainGameMenu::onReplayItem,this));
 	
 	replay_item->setPosition(visibleSize.width-120, visibleSize.height-50);
 	back_item->setPosition(visibleSize.width-60, visibleSize.height-50);

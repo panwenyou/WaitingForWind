@@ -5,8 +5,6 @@
    2.方法名（函数名）首字母小写，接下来的每个独立单词首字母大写，如： addChild(), runAction()等等
    3.变量名全小写，单词间用下划线分割，如：x_position, y_position等等。*/
 
-// 障碍物类
-
 #ifndef BARRIER_H
 #define BARRIER_H
 

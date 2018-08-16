@@ -21,10 +21,8 @@ bool WinningLayer::init()
 
 	// Set the positions of all of them
 	board->setPosition(visible_size.width/2, visible_size.height/2);
-	
 	back_item->setPosition(visible_size.width/2, 
-	(visible_size.height-board->getContentSize().height)/2);
-	
+		(visible_size.height-board->getContentSize().height)/2);
 	menu->setPosition(Vec2::ZERO);
 
 	// Add these to layer
