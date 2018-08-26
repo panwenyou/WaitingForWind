@@ -1,9 +1,9 @@
 /* Waiting For Wind
 
-   Í³Ò»ÃüÃû¹æÔò£º
-   1.ÀàÃûÊ××ÖÄ¸´óÐ´
-   2.·½·¨Ãû£¨º¯ÊýÃû£©Ê××ÖÄ¸Ð¡Ð´£¬½ÓÏÂÀ´µÄÃ¿¸ö¶ÀÁ¢µ¥´ÊÊ××ÖÄ¸´óÐ´£¬Èç£º addChild(), runAction()µÈµÈ
-   3.±äÁ¿ÃûÈ«Ð¡Ð´£¬µ¥´Ê¼äÓÃÏÂ»®Ïß·Ö¸î£¬Èç£ºx_position, y_positionµÈµÈ¡£*/
+   Í³Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+   1.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½Ð´
+   2.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¸Ð¡Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ç£º addChild(), runAction()ï¿½Èµï¿½
+   3.ï¿½ï¿½ï¿½ï¿½ï¿½È«Ð¡Ð´ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Â»ï¿½ï¿½ß·Ö¸î£¬ï¿½ç£ºx_position, y_positionï¿½ÈµÈ¡ï¿½*/
 
 #ifndef ABOUT_SCENE_H
 #define ABOUT_SCENE_H
@@ -13,8 +13,8 @@
 USING_NS_CC;
 
 /*
-   About Scene¸ºÔðÏÔÊ¾ÎÒÃÇ¿ª·¢Ð¡×éµÄ
-   ÐÅÏ¢¡£°üÀ¨Ð¡×éÃûºÍÃ¿¸ö³ÉÔ±µÄÃû×Ö
+   About Sceneï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½Ç¿ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½
+   ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 */
 class AboutScene : public Layer
 {

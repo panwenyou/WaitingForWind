@@ -15,7 +15,7 @@ Scene* TutorialScene::createScene()
 
 bool TutorialScene::init()
 {
-	/* To do ÔÚÕâÀïÌí¼ÓÄãÏëÒªÌí¼ÓµÄ´úÂë*/
+	/* To do åœ¨è¿™é‡Œæ·»åŠ ä½ æƒ³è¦æ·»åŠ çš„ä»£ç */
 	if (!BasicScene::init())
 	{
 		return false;

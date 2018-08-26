@@ -74,7 +74,6 @@ bool HelloWorld::init()
     
     
 	Menu* menu = Menu::create(closeItem, start, tutorial, about, NULL);
-
 	menu->setPosition(Vec2::ZERO);
 	this->addChild(menu);
 

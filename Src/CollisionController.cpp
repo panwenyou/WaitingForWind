@@ -20,17 +20,17 @@ void CollisionController::addHat(Hat* h)
 }
 
 /*
-	Actor��С��80 * 200
-	Hat��С  ��100 * 50
-	����ͷ��Լռ�����ߵ�1/4����50���أ�
-	����ͷ���ϰ벿��ռͷ��һ�루��25���أ�
-	��ײ�ɹ���ñ�ӵ�ê�㴦��ͷ���ϰ벿��
-	X_ACTOR - 40 < X_HAT <��X_ACTOR + 40
+	Actor大小：80 * 200
+	Hat大小  ：100 * 50
+	假设头部约占人身高的1/4（即50像素）
+	假设头的上半部分占头的一半（即25像素）
+	碰撞成功：帽子的锚点处在头的上半部分
+	X_ACTOR - 40 < X_HAT <　X_ACTOR + 40
 	Y_ACTOR+ 75 < Y_HAT < Y_ACTOR + 100
 	*/
 bool CollisionController::isWin()
 {
-	/* To do ��������������Ҫ���ӵĴ���*/
+	/* To do 在这里添加你想要添加的代码*/
 	Point point_actor = actor->getPosition();
 	Point point_hat = hat->getPosition();
 

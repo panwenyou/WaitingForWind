@@ -13,7 +13,9 @@ private:
 public:
 	virtual bool init();
 	virtual void resetHatPosition();
+
 	void addPower();
+
 	static Scene* createScene();
 	CREATE_FUNC(GameScene1);
 };

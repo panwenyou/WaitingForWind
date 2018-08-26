@@ -24,6 +24,7 @@ bool AboutScene::init()
 		return false;
 	}
 
+
 	// Get size
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 
@@ -36,6 +37,7 @@ bool AboutScene::init()
 	back_item->setPosition(580,50);
 
 	// Insert menu item into menu
+
 	auto menu = Menu::create(back_item, NULL);
 	menu->setPosition(Vec2::ZERO);
 
