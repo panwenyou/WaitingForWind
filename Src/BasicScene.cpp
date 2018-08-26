@@ -25,31 +25,52 @@ bool BasicScene::init()
 	auto visible_size = Director::getInstance()->getVisibleSize();
 
 	// 给环境加上物理边界
-	auto world_edge = PhysicsBody::createEdgeBox(visible_size);
+	auto world_edge = PhysicsBody::createEdgeBox(Size(visible_size.width, visible_size.height-120));
 	auto world = Node::create();
 	world->setPhysicsBody(world_edge);
-	world->setPosition(visible_size.width/2, visible_size.height/2);
+	world->setPosition(visible_size.width/2, visible_size.height/2 + 60);
 	this->addChild(world);
 	
 	// 设置按钮
 	// 包括回退按钮和
 	auto back_item = MenuItemImage::create("Back.png", 
-		"Back.png", 
+		"Back_clicked.png", 
 		"Back.png", 
 		CC_CALLBACK_1(BasicScene::onBackCallBack,this));
 	auto replay_item = MenuItemImage::create("Replay.png", 
-		"Replay.png", 
+		"Replay_clicked.png", 
 		"Replay.png", 
 		CC_CALLBACK_1(BasicScene::onReplayCallBack, this));
-	replay_item->setPosition(visible_size.width-120, visible_size.height-50);
-	back_item->setPosition(visible_size.width-60, visible_size.height-50);
+	replay_item->setPosition(visible_size.width-110, visible_size.height-50);
+	back_item->setPosition(visible_size.width-40, visible_size.height-50);
 
 	auto menu = Menu::create(replay_item, back_item, NULL);
 	menu->setPosition(Vec2::ZERO);
 
 	this->addChild(menu,1);
 
+	addPowerList();
+
 	return true;
+}
+
+void BasicScene::addPowerList() {
+	auto visible_size = Director::getInstance()->getVisibleSize();
+	auto power_bar = ListView::create();
+	power_bar->setDirection(ui::ScrollView::Direction::HORIZONTAL);
+	power_bar->setBounceEnabled(true);
+	power_bar->setBackGroundImage("magic_bg.png");
+	power_bar->setAnchorPoint(Vec2(0.5f, 0.5f));
+	power_bar->setContentSize(Size(640, 120));
+	power_bar->setPosition(Vec2(visible_size.width / 2, 60));
+	power_bar->setName("power_bar");
+
+	auto power_layout = Layout::create();
+	power_layout->setName("power_layout");
+	power_layout->setContentSize(power_bar->getContentSize());
+	power_bar->addChild(power_layout);
+
+	this->addChild(power_bar);
 }
 
 void BasicScene::update(float dt)

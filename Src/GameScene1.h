@@ -3,6 +3,8 @@
 
 #include "BasicScene.h"
 #include "Drama.h"
+#include "PowerItem.h"
+
 
 class GameScene1 : public BasicScene
 {
@@ -11,6 +13,7 @@ private:
 public:
 	virtual bool init();
 	virtual void resetHatPosition();
+	void addPower();
 	static Scene* createScene();
 	CREATE_FUNC(GameScene1);
 };

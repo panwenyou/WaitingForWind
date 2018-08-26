@@ -23,8 +23,12 @@
 #include "Fan.h"
 #include "Barrier.h"
 #include "WinningLayer.h"
+#include "ui/CocosGUI.h"
+#include "cocos-ext.h"
 
 USING_NS_CC;
+USING_NS_CC_EXT;
+using namespace ui;
 
 class BasicScene : public Layer
 {
@@ -45,6 +49,9 @@ public:
 
 	// 添加子节点
 	void myAddChild(Sprite* s, const int type);
+
+	// 添加下方技能栏
+	void addPowerList();
 
 	// 返回按钮回调
 	void onBackCallBack(Ref* pSender);
