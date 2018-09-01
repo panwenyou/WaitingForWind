@@ -12,6 +12,9 @@ bool BasicScene::init()
 	max_barrier_tag = 20;
 	max_fan_tag = 10;
 
+	// 设置自己的tag值
+	this->setTag(0);
+
 	// 初始化is_win
 	is_win = false;
 
@@ -98,9 +101,10 @@ void BasicScene::onWinning()
 	int hat_num = hat->hat_num;
 	hat->removeItself();
 
-	auto actor = this->getChildByTag(1);
+	auto actor = static_cast<Actor*>(this->getChildByTag(1));
 	hat = Hat::create(hat_num);
-	hat->setPosition(actor->getPositionX(), actor->getPositionY()+75);
+	hat->setPosition(actor->getWinningPoint().x, actor->getWinningPoint().y + 10);
+	hat->getPhysicsBody()->setGravityEnable(false);
 	hat->comeOut();
 	this->addChild(hat);
 

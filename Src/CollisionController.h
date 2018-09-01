@@ -19,6 +19,16 @@
 #include "Fan.h"
 #include <math.h>//自加
 
+struct Area {
+public:
+	Vec2 left_top;
+	Vec2 botton_down;
+	Area() {
+		left_top = Vec2(0.0f, 0.0f);
+		botton_down = Vec2(0.0f, 0.0f);
+	}
+};
+
 class CollisionController
 {
 public:
@@ -28,8 +38,8 @@ public:
 	// 添加Hat实例指针
 	void addHat(Hat* h);
 
-	// 添加Actor实例指针
-	void addActor(Actor* a);
+	// 添加Hat实例指针
+	void addActor(Actor* ac);
 
 	// 检查是否达到胜利条件
 	bool isWin();

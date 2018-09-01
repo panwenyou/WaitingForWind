@@ -1,22 +1,18 @@
 #include "CollisionController.h"
 
 CollisionController::~CollisionController(void)
-{
-	if (hat != nullptr)
-		delete hat;
-
-	if (actor != nullptr)
-		delete actor;
-}
-
-void CollisionController::addActor(Actor* a)
-{
-	actor = a;
+{	
+	
 }
 
 void CollisionController::addHat(Hat* h)
 {
 	hat = h;
+}
+
+void CollisionController::addActor(Actor* ac)
+{
+	actor = ac;
 }
 
 /*
@@ -31,7 +27,7 @@ void CollisionController::addHat(Hat* h)
 bool CollisionController::isWin()
 {
 	/* To do 在这里添加你想要添加的代码*/
-	Point point_actor = actor->getPosition();
+	Point point_actor = actor->getWinningPoint();
 	Point point_hat = hat->getPosition();
 
 	int x_actor = point_actor.x, y_actor = point_actor.y;
@@ -40,8 +36,7 @@ bool CollisionController::isWin()
 	int deltay = y_hat - y_actor;
 
 	if (abs(deltax) <= 40 && 
-		deltay >= 75 && 
-		deltay <= 100) // include math.h in header file
+		abs(deltay) <= 25) // include math.h in header file
 	{
 		//hat->stopAllActions(); // should like that?
 		hat->getPhysicsBody()->setGravityEnable(false);

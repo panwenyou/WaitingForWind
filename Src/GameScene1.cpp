@@ -20,7 +20,7 @@ bool GameScene1::init()
 	bg->setPosition(visible_size.width/2, visible_size.height/2);
 	fan->setPosition(100, 220);
 	hat->setPosition(visible_size.width/2, visible_size.height - 50);
-	actor->setPosition(visible_size.width - 80, actor->getContentSize().height);
+	actor->setPosition(visible_size.width - 80, 270);
 	
 
 	this->addChild(bg);
@@ -37,18 +37,22 @@ void GameScene1::addPower() {
 	auto power_bar = this->getChildByName("power_bar");
 	auto power_layout = power_bar->getChildByName("power_layout");
 
-	auto btn = PowerItem::create();
-	btn->setImage("luffy_power.png");
+	auto btn = LuffyPower::create();
 	btn->setContentSize(Size(100, 100));
 	btn->setPosition(Vec2(100, 60));
 	power_layout->addChild(btn);
 
-	for (int i = 0; i < 9; i++) {
-		btn = PowerItem::create();
+	for (int i = 0; i < 3; i++) {
+		auto btn = PowerItem::create();
+		btn->setImage("empty_power.png");
 		btn->setContentSize(Size(100, 100));
 		btn->setPosition(Vec2(220 + i * 120, 60));
 		power_layout->addChild(btn);
 	}
+}
+
+void GameScene1::btnTouch(Ref *pSender, TouchEventType type) {
+	CCLOG("touch town");
 }
 
 void GameScene1::resetHatPosition()
@@ -62,7 +66,6 @@ Scene* GameScene1::createScene()
 	// Create Physical World
 	Scene* scene = Scene::createWithPhysics();
 	auto layer = GameScene1::create();
-	layer->setTag(0);
 	scene->addChild(layer);
 	return scene;
 }

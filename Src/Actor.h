@@ -18,7 +18,15 @@ public:
 	Actor(void);
 	~Actor(void);
 
+	// 改变胜利区域
+	void changeWinningPoint(Vec2 anchor);
+	void setPosition(float x, float y);
+	Vec2 getWinningPoint();
+
 	static Actor* create(int actor_num);
+
+private:
+	Vec2 winning_point;
 };
 
 #endif
