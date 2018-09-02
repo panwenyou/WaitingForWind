@@ -12,3 +12,4 @@ Bin: Stores the apk-install-package<br/>
 ![result](https://github.com/panwenyou/WaitingForWind/raw/master/screen_shots/stage.png) 
 ## Main Game Scene
 ![result](https://github.com/panwenyou/WaitingForWind/raw/master/screen_shots/game.png) 
+![result](https://github.com/panwenyou/WaitingForWind/raw/master/screen_shots/game2.png) 

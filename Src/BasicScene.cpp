@@ -104,7 +104,7 @@ void BasicScene::onWinning()
 	auto actor = static_cast<Actor*>(this->getChildByTag(1));
 	hat = Hat::create(hat_num);
 	hat->setPosition(actor->getWinningPoint().x, actor->getWinningPoint().y + 10);
-	hat->getPhysicsBody()->setGravityEnable(false);
+	hat->getPhysicsBody()->setEnabled(false);
 	hat->comeOut();
 	this->addChild(hat);
 
@@ -182,4 +182,8 @@ void BasicScene::onReplayCallBack(Ref* pSender)
 BasicScene::~BasicScene()
 {
 	cc.clean();
+}
+
+BarrierController* BasicScene::getBarrierController() {
+	return &this->bc;
 }

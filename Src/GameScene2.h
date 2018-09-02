@@ -4,6 +4,7 @@
 #include "BasicScene.h"
 #include "LuffyPower.h"
 #include "ZoroPower.h"
+#include "Bargie.h"
 
 class GameScene2 : public BasicScene
 {

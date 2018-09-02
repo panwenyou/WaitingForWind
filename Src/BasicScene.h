@@ -25,6 +25,7 @@
 #include "WinningLayer.h"
 #include "ui/CocosGUI.h"
 #include "cocos-ext.h"
+#include "BarrierController.h"
 
 USING_NS_CC;
 USING_NS_CC_EXT;
@@ -59,6 +60,9 @@ public:
 
 	virtual void resetHatPosition() {}
 
+	// »ñµÃBarrierControllerÊµÀý
+	BarrierController* getBarrierController();
+
 	~BasicScene();
 
 	static const int TYPE_ACTOR = 0; 
@@ -68,6 +72,7 @@ public:
 
 protected:
 	CollisionController cc;
+	BarrierController bc;
 	int max_barrier_tag;
 	int max_fan_tag;
 

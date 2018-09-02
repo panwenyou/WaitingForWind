@@ -3,6 +3,7 @@
 
 #include "cocos2d.h"
 #include "Actor.h"
+#include "BasicScene.h"
 
 USING_NS_CC;
 

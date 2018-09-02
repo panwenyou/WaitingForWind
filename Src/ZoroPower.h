@@ -19,6 +19,8 @@ public:
 	void animationCallBack();
 	//过场动画回调
 	void animationcallBack2();
+	//效果回调
+	void animationcallBack3();
 private:
 	bool available;
 };

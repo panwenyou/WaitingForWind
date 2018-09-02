@@ -18,6 +18,13 @@ public:
 	Barrier(void);
 	~Barrier(void);
 
+	// 碰撞检测
+	virtual void hit() {};
+	// 销毁动画
+	virtual void destroyAnimation() {};
+	// 运动改变
+	virtual void changeAction() {};
+
 	static Barrier* create(char* filename, int type);
 	void setVelocity(int x, int y);
 };

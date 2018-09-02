@@ -11,6 +11,7 @@ bool GameScene4::init()
 	auto visible_size = Director::getInstance()->getVisibleSize();
 
 	auto bg = Sprite::create("WindComesStageBG1.png");
+	bg->setLocalZOrder(-2);
 	auto hat = Hat::create(2);
 	auto fan = Fan::create(Fan::NORTH);
 	auto fan2 = Fan::create(Fan::SOUTH_EAST);

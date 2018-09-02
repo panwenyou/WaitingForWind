@@ -22,33 +22,25 @@ bool GameScene2::init()
 	luffy->setPosition(wood->getPositionX(),
 		wood->getPositionY() + wood->getContentSize().height/2 + luffy->getContentSize().height/2);
 
-	auto bagie1 = Barrier::create("Bagie1.png",0);
+	auto bagie1 = Bargie::create(1);
 	bagie1->setPosition(50,860);
+	this->bc.addBarrier(bagie1);
 
-	auto bagie2 = Barrier::create("Bagie2.png",0);
+	auto bagie2 = Bargie::create(2);
 	bagie2->setPosition(visible_size.width-50,780);
+	this->bc.addBarrier(bagie2);
 
-	auto bagie3 = Barrier::create("Bagie3.png",0);
+	auto bagie3 = Bargie::create(3);
 	bagie3->setPosition(50,560);
+	this->bc.addBarrier(bagie3);
 
-	auto bagie4 = Barrier::create("Bagie4.png",0);
+	auto bagie4 = Bargie::create(4);
 	bagie4->setPosition(visible_size.width-50,360);
+	this->bc.addBarrier(bagie4);
 
-	auto bagie5 = Barrier::create("Bagie5.png",0);
+	auto bagie5 = Bargie::create(5);
 	bagie5->setPosition(50,250);
-
-	/*auto left = MoveBy::create(5, ccp(-visible_size.width+100, 0));
-	auto right = MoveBy::create(5, ccp(visible_size.width-100, 0));
-	auto sequence1 = Sequence::create(left, right, NULL);
-	auto sequence2 = Sequence::create(right, left, NULL);
-	auto repeat1 = RepeatForever::create(sequence1);
-	auto repeat2 = RepeatForever::create(sequence2);
-
-	bagie1->runAction(repeat2);
-	bagie2->runAction(repeat1);
-	bagie3->runAction(repeat2);
-	bagie4->runAction(repeat1);
-	bagie5->runAction(repeat2);*/
+	this->bc.addBarrier(bagie5);
 
 	bagie1->setVelocity(100, 0);
 	bagie2->setVelocity(-100,0);

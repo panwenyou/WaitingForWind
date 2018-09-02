@@ -31,7 +31,7 @@ bool ZoroPower::onTouchBegan(Touch *pTouch, Event *pEvent) {
 	Size s = target->getContentSize();
 	Rect rect = Rect(0, 0, s.width, s.height);
 	if (rect.containsPoint(locationInNode)) {
-		auto progress = ProgressTo::create(10, 100);
+		auto progress = ProgressTo::create(20, 100);
 		auto timer = ProgressTimer::create(Sprite::create("power_cd.png"));
 		timer->setType(ProgressTimer::Type::RADIAL);
 		timer->setReverseProgress(true);
@@ -55,7 +55,8 @@ bool ZoroPower::onTouchBegan(Touch *pTouch, Event *pEvent) {
 		auto move_to3 = MoveTo::create(0.3,
 			Vec2(cur_layer->getContentSize().width + 320, cur_layer->getContentSize().height / 2));
 		auto func2 = CallFunc::create(CC_CALLBACK_0(ZoroPower::animationcallBack2, this));
-		auto seq2 = Sequence::create(move_to1, move_to2, move_to3, func2, nullptr);
+		auto func3 = CallFunc::create(CC_CALLBACK_0(ZoroPower::animationcallBack3, this));
+		auto seq2 = Sequence::create(move_to1, func3, move_to2, move_to3, func2, nullptr);
 		ani_bg->runAction(seq2);
 		cur_layer->addChild(ani_bg);
 
@@ -73,4 +74,9 @@ void ZoroPower::animationCallBack() {
 void ZoroPower::animationcallBack2() {
 	auto cur_layer = Director::getInstance()->getRunningScene()->getChildByTag(0);
 	cur_layer->removeChildByName("power_bg");
+}
+
+void ZoroPower::animationcallBack3() {
+	auto cur_layer = static_cast<BasicScene*>(Director::getInstance()->getRunningScene()->getChildByTag(0));
+	cur_layer->getBarrierController()->destroyAll();
 }
